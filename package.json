@@ -1,6 +1,6 @@
 {
   "name": "@jtml/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JSON Token-Minimized Language - Ultra-compact serialization format optimized for LLM token efficiency",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -48,7 +48,7 @@
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "@typescript-eslint/parser": "^8.57.2",
-    "eslint": "^8.56.0",
+    "eslint": "^9.39.4",
     "prettier": "^3.2.4",
     "tsup": "^8.0.1",
     "tsx": "^4.7.0",

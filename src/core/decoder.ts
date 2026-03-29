@@ -135,7 +135,7 @@ export class JTMLDecoder {
       const field = schema.fields[i];
       const rawValue = values[i];
 
-      if (rawValue === '' || rawValue === null) {
+      if (rawValue === null) {
         result[field.name] = null;
       } else {
         result[field.name] = this.decodeValue(rawValue, field.typeInfo.type);
@@ -185,8 +185,16 @@ export class JTMLDecoder {
    * Decode a single value
    */
   private decodeValue(value: string | undefined, type?: string): unknown {
-    if (value === undefined || value === '' || value === null) {
+    if (value === undefined || value === null) {
       return null;
+    }
+
+    if (value === '') {
+      return null;
+    }
+
+    if (value === '""') {
+      return '';
     }
 
     // Boolean

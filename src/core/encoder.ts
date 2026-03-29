@@ -104,6 +104,9 @@ export class JTMLEncoder {
     }
 
     if (typeof value === 'string') {
+      if (value === '') {
+        return '""';
+      }
       // Escape special characters
       return value
         .replace(/\\/g, '\\\\')

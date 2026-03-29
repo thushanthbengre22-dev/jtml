@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-03-29
+
+### Fixed
+- Empty string fields now round-trip correctly. Previously `""` and `null` both encoded to empty and decoded back as `null`. Empty strings now encode as `""` sentinel and decode back to `""`.
+
 ## [0.1.0] - 2026-03-28
 
 ### Added
